@@ -9,6 +9,10 @@ menubtn.onclick = function () {
     menusm.style.display = "none";
   }
 };
+function redirectToShop() {
+  window.location.href = "/shop.html";
+}
+
 
 async function fetchData() {
   try {

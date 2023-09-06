@@ -34,5 +34,6 @@ function add() {
       .catch((error) => {
         console.error("Error adding data:", error);
       });
+      window.location.reaload();
   }
   

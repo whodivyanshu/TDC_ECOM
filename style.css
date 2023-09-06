@@ -14,6 +14,28 @@ a{
     text-decoration: none;
     color: black;
 }
+.bodyy{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* width: 100vw; */
+}
+.bodyy h2{
+    font-size: 40px;
+    font-family: 'Changa One', cursive;
+    font-weight: 100;
+}
+.comingsoon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    font-family: 'Changa One', cursive;
+    font-weight: 100;
+}
 .navleft{
     display: flex;
     width: 40%;
@@ -241,6 +263,7 @@ a{
 }
 .body4imgsdiv{
     display: flex;
+    cursor: pointer;
     flex-direction: column;
     justify-content: center;
     align-items: center;
