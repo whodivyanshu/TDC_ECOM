@@ -10,6 +10,10 @@
     background-color: white;
     z-index: 2;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 .navleft{
     display: flex;
     width: 40%;
@@ -317,6 +321,18 @@
     font-weight: 800;
     margin-top: 5px;
 }
+.inputshop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inputshop input{
+    font-size: 20px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 0px 20px;
+}
 @media screen and (max-width: 1700px){
     .nav{
         padding: 20px 0px;
@@ -550,6 +566,7 @@
         display: none;
         flex-direction: column;
         position: absolute;
+        position: fixed;
         top: 5%;
         font-family: 'Courier New', Courier, monospace;
         font-weight: 700;
