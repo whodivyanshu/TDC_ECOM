@@ -15,7 +15,7 @@ menubtn.onclick = function () {
 
 async function fetchData() {
   try {
-    const response = await fetch("https://tdc-ecom.onrender.com/getData");
+    const response = await fetch("http://localhost:3000/getData");
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
