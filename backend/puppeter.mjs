@@ -1,6 +1,5 @@
 import puppeteer from "puppeteer";
 import cheerio from "cheerio";
-import fs from "fs";
 
 (async () => {
   const browser = await puppeteer.launch({ headless: false });
