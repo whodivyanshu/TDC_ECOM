@@ -13,7 +13,6 @@ function redirectToShop() {
   window.location.href = "/shop.html";
 }
 
-
 async function fetchData() {
   try {
     const response = await fetch("http://localhost:3000/getData");
@@ -36,7 +35,7 @@ function renderData(data) {
       <div class="body4imgsdiv">
         <img src="${item.imageurl}" alt="${item.title}">
         <h3>${item.name}</h3>
-        <p> $${item.price}.00</p>
+        <p>${item.price}</p>
       </div>
     `;
   });

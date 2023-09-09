@@ -269,7 +269,9 @@ a{
     align-items: center;
 }
 .body4imgsdiv h3{
-    font-size: 27px;
+    font-size: 20px;
+    width: 300px;
+    text-align: center;
     font-family: 'Changa One', cursive;
     font-weight: 100;
 }

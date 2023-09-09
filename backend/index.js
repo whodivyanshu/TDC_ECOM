@@ -10,7 +10,7 @@ app.use(express.json());
 const dataSchema = new mongoose.Schema({
   name: String,
   imageurl: String,
-  price: Number,
+  price: String,
   description: String,
   category: String,
 });
