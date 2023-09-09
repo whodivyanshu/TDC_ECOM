@@ -43,7 +43,7 @@ function handleSearch() {
 function renderData(data) {
     const html = data.map((item) => {
       return `
-        <div class="body4imgsdiv" onclick="redirectToComingSoon()">
+        <div class="body4imgsdiv" onclick="redirectToComingSoon('${item.name}')">
           <img src="${item.imageurl}" alt="${item.title}">
           <h3>${item.name}</h3>
           <p> $${item.price}.00</p>
@@ -54,7 +54,7 @@ function renderData(data) {
     container.innerHTML = html.join("");
   }
   
-  function redirectToComingSoon() {
-    window.location.href = "/comingsoon.html";
+  function redirectToComingSoon(routeName) {
+    window.location.href = "/product.html?name=" + routeName +"";
   }
   
