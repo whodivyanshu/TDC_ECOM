@@ -22,7 +22,7 @@ async function fetchData() {
     const data = await response.json();
     console.log("Fetched data:", data);
     allProducts = data;
-    renderData(allProducts); 
+    renderData(allProducts);
   } catch (error) {
     console.error("Error fetching data:", error);
   }
@@ -41,20 +41,19 @@ function handleSearch() {
 }
 
 function renderData(data) {
-    const html = data.map((item) => {
-      return `
+  const html = data.map((item) => {
+    return `
         <div class="body4imgsdiv" onclick="redirectToComingSoon('${item.name}')">
           <img src="${item.imageurl}" alt="${item.title}">
           <h3>${item.name}</h3>
-          <p> $${item.price}.00</p>
+          <p> ${item.price}.00</p>
         </div>
       `;
-    });
-  
-    container.innerHTML = html.join("");
-  }
-  
-  function redirectToComingSoon(routeName) {
-    window.location.href = "/product.html?name=" + routeName +"";
-  }
-  
+  });
+
+  container.innerHTML = html.join("");
+}
+
+function redirectToComingSoon(routeName) {
+  window.location.href = "/product.html?name=" + routeName + "";
+}

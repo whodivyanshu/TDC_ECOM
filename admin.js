@@ -34,13 +34,19 @@ function add() {
 }
 
 const addWS = async () => {
-  const response = await fetch("http://localhost:3000/run-puppeteer", {
-    method: "GET",
+  const number = document.getElementById("number").value;
+  const productName = document.getElementById("productName").value;
+
+  const newSearch = {
+    productName,
+    number,
+  };
+  const response = await fetch("http://localhost:3000/getNumber", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newSearch),
   });
-  if (response.ok) {
-    console.log("Data added successfully.");
-  } else {
-    console.error("Failed to add data.");
-  }
-  window.location.reload();
+  return response.json();
 };
