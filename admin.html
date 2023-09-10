@@ -25,28 +25,12 @@
             type="text"
             id="name"
           />
-          <label class="label" for="imgurl">IMAGE URL:</label>
-          <input
-            class="input"
-            placeholder="Enter image URL"
-            type="text"
-            id="imgurl"
-          />
-          <label class="label" for="price">PRICE:</label>
-          <input
-            class="input"
-            placeholder="Enter price"
-            type="number"
-            id="price"
-          />
-          <label class="label" for="desc">DESCRIPTION:</label>
-          <input
-            class="input"
-            placeholder="Enter description"
-            type="text"
-            id="desc"
-          />
-          <button class="button" onclick="add()">ADD</button>
+          <label for="number" class="label" style="width: 400px"
+            >Enter the number of datas you want to fetch from web scrapping (At
+            max 10)</label
+          >
+          <input class="input" type="number" id="number" max="10" />
+          <button class="button" onclick="addWS()">ADD</button>
         </div>
         <div class="right">
           <h3>Add data manually</h3>
