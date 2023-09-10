@@ -1,14 +1,17 @@
+import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import puppeteer from "puppeteer";
 import cheerio from "cheerio";
 import fetch from "node-fetch";
+dotenv.config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+const port = process.env.PORT || 3000;
 
 const dataSchema = new mongoose.Schema({
   name: String,
@@ -24,13 +27,10 @@ let numberr = 0;
 const Data = mongoose.model("Data", dataSchema);
 
 mongoose
-  .connect(
-    "mongodb+srv://divyanshu:1234@ecom.6l8v2zu.mongodb.net/?retryWrites=true&w=majority",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
-  )
+  .connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
     console.log("Connected to the database");
   })
@@ -133,7 +133,6 @@ const puppeter = async () => {
   }
 };
 
-const port = 3000;
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
 });
